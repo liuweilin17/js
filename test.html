@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<head><title>js test</title></head>
+<body>
+<script>
+/*
+//promp
+let age = prompt('How old are you?', 100);
+alert(`You are ${age} years old!`); // You are 100 years old!
+
+//confirm
+let isBoss = confirm("Are you the boss?");
+alert( isBoss ); // true if OK is pressed
+
+if ("0") {
+  alert( 'Hello' );
+}
+
+//a chain of OR "||" returns the first truthy value or the last one if no such value is found.
+// "&&" is similar
+alert( undefined || null || 0 ); // 0 (all falsy, returns the last value)
+
+//function could be assigned to a variable and even alert could print the function!
+// showOk, showCancel are callback functions, we call the function and expect it to be called back if necessary
+function ask(question, yes, no) {
+  if (confirm(question)) yes()
+  else no();
+}
+
+function showOk() {
+  alert( "You agreed." );
+}
+
+function showCancel() {
+  alert( "You canceled the execution." );
+}
+
+// usage: functions showOk, showCancel are passed as arguments to ask
+ask("Do you agree?", showOk, showCancel);
+alert(ask);
+
+// Function Declaration
+function sum(a, b) {
+  return a + b;
+}
+
+// Function Expression
+let sum = function(a, b) {
+  return a + b;
+};
+
+// Arrow function
+// If there are no arguments, parentheses should be empty (but they should be present):
+let sum = (a, b) => a + b;
+//The arrow function is a shorter form of:
+let sum = function(a, b) {
+  return a + b;
+};
+
+let sayHi = () => alert("Hello!");
+
+//Bahavior Driven Development(BDD): tests AND documentation AND examples
+
+//Objects
+let user = {
+  name: "John",
+  age: 30,
+  "likes birds": true  // multiword property name must be quoted
+};
+alert(user.name);
+alert(user["likes birds"]);	
+
+//There is a background process in the JavaScript engine that is called garbage collector, which monitors all objects and removes those that have become unreachable.
+
+//Symbols
+//There will be no conflict, because symbols are always different, even if they have the same name.
+//Now note that if we used a string "id" instead of a symbol for the same purpose, then there would be a conflict:
+let user = { name: "John" };
+
+// our script uses "id" property
+user.id = "ID Value";
+// ...if later another script the uses "id" for its purposes...
+user.id = "Their id value"
+// boom! overwritten! it did not mean to harm the colleague, but did it!
+
+//If we want to use a symbol in an object literal, we need square brackets.
+//Symbols are skipped by for…in
+let id = Symbol("id");
+let user = {
+  name: "John",
+  age: 30,
+  [id]: 123
+};
+
+for (let key in user) alert(key); // name, age (no symbols)
+
+// the direct access by the symbol works
+alert( "Direct: " + user[id] );
+
+//Global symbols: Symbol.for(key).
+// read from the global registry
+let id = Symbol.for("id"); // if the symbol did not exist, it is created
+// read it again
+let idAgain = Symbol.for("id");
+// the same symbol
+alert( id === idAgain ); // true
+
+//Symbol.keyFor(sym), that does the reverse: returns a name by a global symbol.
+let sym = Symbol.for("name");
+let sym2 = Symbol.for("id");
+
+// get name from symbol
+alert( Symbol.keyFor(sym) ); // name
+alert( Symbol.keyFor(sym2) ); // id
+*/
+setInterval(alert('1'), 1000);
+setInterval(alert('2'), 0);
+alert('3');
+
+
+</script>
+</body>
+</html>
